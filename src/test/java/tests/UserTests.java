@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import screens.*;
 import utils.tests.BaseTest;
 
-import java.awt.*;
 
 public class UserTests extends BaseTest {
 

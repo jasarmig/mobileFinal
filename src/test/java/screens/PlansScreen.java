@@ -14,9 +14,6 @@ public class PlansScreen extends BaseScreen {
     AndroidElement diningReserveButton;
 
     public boolean getDiningReserveButton() {
-        if(diningReserveButton != null){
-            return true;
-        }
-        return false;
+        return diningReserveButton != null;
     }
 }

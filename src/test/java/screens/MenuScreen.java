@@ -14,15 +14,16 @@ public class MenuScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "UiSelector().resourceId(\"com.disney.wdpro.dlr:id/content\").textContains(\"Privacy\")")
     private AndroidElement privacyButton;
 
-    private AndroidElement scrollableMenu = driver.findElement(new MobileBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).flingToEnd(10)"));
+    private final AndroidElement scrollableMenu = driver.findElement(new MobileBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).flingToEnd(10)"));
 
     public PrivacyScreen goToPrivacyScreen() {
-        getScrollableMenu();
-        click(privacyButton);
+        if(getScrollableMenu()){
+            click(privacyButton);
+        }
         return new PrivacyScreen(driver);
     }
 
-    public AndroidElement getScrollableMenu() {
-        return scrollableMenu;
+    public boolean getScrollableMenu() {
+        return scrollableMenu != null ;
     }
 }

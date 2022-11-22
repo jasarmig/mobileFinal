@@ -5,7 +5,6 @@ import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import screens.DashboardScreen;
 import utils.ConfigCapabilities;
 import utils.screens.BaseScreen;
 
@@ -31,7 +30,7 @@ public class BaseTest {
         ConfigCapabilities.deviceSetup(capabilities);
         ConfigCapabilities.applicationSetup(capabilities);
         try {
-            driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+            driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         } catch (MalformedURLException exception) {
             exception.printStackTrace();
         }

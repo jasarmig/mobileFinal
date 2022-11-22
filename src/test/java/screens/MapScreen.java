@@ -21,10 +21,6 @@ public class MapScreen extends BaseScreen {
         return categoryButton;
     }
 
-    public boolean categoryButtonDisplayed() {
-        return isElementAvailable(categoryButton);
-    }
-
     public boolean hotelsCategoryAvailable() {
         return isElementAvailable(hotelsText);
     }
