@@ -6,7 +6,17 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import utils.screens.BaseScreen;
 
+/**
+ * Menu Screen class
+ *
+ * @author je.sarmiento
+ */
 public class MenuScreen extends BaseScreen {
+
+    /**
+     * Class constructor
+     * @param driver
+     */
     public MenuScreen(AndroidDriver<AndroidElement> driver) {
         super(driver);
     }
@@ -16,6 +26,11 @@ public class MenuScreen extends BaseScreen {
 
     private final AndroidElement scrollableMenu = driver.findElement(new MobileBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).flingToEnd(10)"));
 
+    /**
+     * Method to navigate to Privacy Screen
+     *
+     * @return PrivacyScreen
+     */
     public PrivacyScreen goToPrivacyScreen() {
         if(getScrollableMenu()){
             click(privacyButton);
@@ -24,6 +39,11 @@ public class MenuScreen extends BaseScreen {
         return null;
     }
 
+    /**
+     * Method to validate if the scrollable element is present
+     *
+     * @return boolean
+     */
     public boolean getScrollableMenu() {
         return scrollableMenu != null ;
     }

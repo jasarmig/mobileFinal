@@ -13,21 +13,44 @@ import screens.DashboardScreen;
 
 import java.time.Duration;
 
+/**
+ * Base class for all screen objects
+ *
+ * @@author je.sarmiento
+ */
 public class BaseScreen {
 
     protected final AndroidDriver<AndroidElement> driver;
 
+    /**
+     * Class constructor
+     *
+     * @param driver
+     */
     public BaseScreen(AndroidDriver<AndroidElement> driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(0)), this);
     }
 
+    /**
+     * Wrapper for click event with custom wait
+     *
+     * @param element : AndroidElement
+     * @author Hans.Marquez
+     */
     public void click(AndroidElement element) {
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(element));
         element.click();
     }
 
+    /**
+     * Wrapper for visibility event
+     *
+     * @param element : AndroidElement
+     * @return boolean
+     * @author Hans.Marquez
+     */
     public boolean isElementAvailable(AndroidElement element) {
         WebDriverWait wait = new WebDriverWait(driver, 3);
         try {
@@ -38,6 +61,9 @@ public class BaseScreen {
         }
     }
 
+    /**
+     * Necessary elements to navigate to Dashboard on setup
+     */
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/permission_primary_btn\")")
     private AndroidElement getStartedButton;
 
@@ -50,6 +76,12 @@ public class BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"android:id/button2\")")
     private AndroidElement dismissUpdateButton;
 
+    /**
+     * Method to navigate to Dashboard
+     *
+     * @return DashboardScreen
+     * @author je.sarmiento
+     */
     public DashboardScreen goToDashboard() {
         click(getStartedButton);
         click(skipButton);

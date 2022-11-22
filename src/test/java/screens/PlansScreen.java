@@ -5,7 +5,17 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import utils.screens.BaseScreen;
 
+/**
+ * Plans Screen class
+ *
+ * @author je.sarmiento
+ */
 public class PlansScreen extends BaseScreen {
+    /**
+     * Class constructor
+     *
+     * @param driver
+     */
     public PlansScreen(AndroidDriver<AndroidElement> driver) {
         super(driver);
     }

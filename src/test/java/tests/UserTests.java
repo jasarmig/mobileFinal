@@ -6,9 +6,16 @@ import screens.*;
 import utils.reporting.Reporter;
 import utils.tests.BaseTest;
 
-
+/**
+ * Case tests
+ *
+ * @author je.sarmiento
+ */
 public class UserTests extends BaseTest {
 
+    /**
+     * Navigates from Dashboard to Map screen and validates Hotel is an option in the categories list
+     */
     @Test
     public void categoryTest() {
         Reporter.info("Navigating to Map Screen");
@@ -21,6 +28,9 @@ public class UserTests extends BaseTest {
         Assert.assertTrue(maps.hotelsCategoryAvailable(),"Category Not Available");
     }
 
+    /**
+     * Navigates from Dashboard to Privacy Screen and validates the requested options
+     */
     @Test
     public void privacyAndLegal() {
         Reporter.info("Navigating to Menu Screen");
@@ -31,6 +41,9 @@ public class UserTests extends BaseTest {
         Assert.assertTrue(privacy.optionsExist(),"Options don't match");
     }
 
+    /**
+     * Navigates from Dashboard to Plans screen and validates there is an option for dining reservations
+     */
     @Test
     public void addPlansOption() {
         Reporter.info("Navigating to Plans Screen");

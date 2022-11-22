@@ -6,10 +6,17 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import utils.screens.BaseScreen;
 
 
-
+/**
+ * Dashboard Screen class
+ *
+ * @author je.sarmiento
+ */
 public class DashboardScreen extends BaseScreen {
 
-
+    /**
+     * Class constructor
+     *
+     */
     public DashboardScreen(AndroidDriver<AndroidElement> driver) {
         super(driver);
     }
@@ -23,16 +30,31 @@ public class DashboardScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/tab_animated_icon\")")
     private AndroidElement addPlansButton;
 
+    /**
+     * Method to navigate to Map screen from Dashboard
+     *
+     * @return MapScreen
+     */
     public MapScreen goToMapScreen() {
         click(mapButton);
         return new MapScreen(driver);
     }
 
+    /**
+     * Method to navigate to Menu screen from Dashboard
+     *
+     * @return MenuScreen
+     */
     public MenuScreen goToMenuScreen() {
         click(menuButton);
         return new MenuScreen(driver);
     }
 
+    /**
+     * Method to navigate to Plans screen from Dashboard
+     *
+     * @return PlansScreen
+     */
     public PlansScreen goToPlansScreen() {
         click(addPlansButton);
         return new PlansScreen(driver);

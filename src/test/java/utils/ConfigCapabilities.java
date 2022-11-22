@@ -8,6 +8,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+/**
+ * Class for capabilities configuration from external file.
+ *
+ * @author Arley.Bolivar
+ */
 @SuppressWarnings({"deprecation", "TryWithIdenticalCatches"})
 public class ConfigCapabilities {
 
@@ -21,12 +26,24 @@ public class ConfigCapabilities {
     private static final String AUTOMATION_NAME = "automationName";
     private static final JsonParser parser = new JsonParser();
 
+    /**
+     * SetUp´s application.
+     *
+     * @param capabilities : DesiredCapabilities
+     * @author Arley.Bolivar
+     */
     public static void applicationSetup(DesiredCapabilities capabilities) {
         capabilities.setCapability(APP_PACKAGE, getJsonDataProperty(APP_PACKAGE));
         capabilities.setCapability(APP_ACTIVITY, getJsonDataProperty(APP_ACTIVITY));
         capabilities.setCapability(APP, getJsonDataProperty(APP));
     }
 
+    /**
+     * Device SetUp.
+     *
+     * @param capabilities : DesiredCapabilities
+     * @author Arley.Bolivar
+     */
     public static void deviceSetup(DesiredCapabilities capabilities) {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, getJsonDataProperty(DEVICE_NAME));
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, getJsonDataProperty(PLATFORM_VERSION));
@@ -34,6 +51,13 @@ public class ConfigCapabilities {
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, getJsonDataProperty(AUTOMATION_NAME));
     }
 
+    /**
+     * Method to get data from JSON file.
+     *
+     * @param property : String
+     * @return String
+     * @author Arley.Bolivar
+     */
     private static String getJsonDataProperty(String property) {
         try{
             Object obj = parser.parse(new FileReader(JSON_FILE_PATH));

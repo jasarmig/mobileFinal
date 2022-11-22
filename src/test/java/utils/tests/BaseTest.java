@@ -13,6 +13,11 @@ import utils.screens.BaseScreen;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * Base class for Test classes.
+ *
+ * @author je.sarmiento
+ */
 public class BaseTest {
 
     public static AndroidDriver<AndroidElement> driver;
@@ -24,12 +29,23 @@ public class BaseTest {
         return driver;
     }
 
+    /**
+     * Method to navigate to Dashboard during environment setup
+     *
+     * @return DashboardScreen
+     * @author je.sarmiento
+     */
     public DashboardScreen setUpStartApp() {
         baseScreen = new BaseScreen(getDriver());
         Reporter.info("Navigating to Dashboard");
         return baseScreen.goToDashboard();
     }
 
+    /**
+     * Method to setup environment before each test
+     *
+     * @author Arley.Bolivar
+     */
     @BeforeMethod(alwaysRun = true)
     public void environmentSetUp() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -44,6 +60,11 @@ public class BaseTest {
         dashboard = setUpStartApp();
     }
 
+    /**
+     * Method to close the app after each test
+     *
+     * @author Arley.Bolivar
+     */
     @AfterMethod(alwaysRun = true)
     public void mobileApplicationEnd() {
         Reporter.info("Test Concluded");
