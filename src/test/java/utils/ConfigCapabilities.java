@@ -15,7 +15,7 @@ public class ConfigCapabilities {
     private static final String PLATFORM_VERSION = "platformVersion";
     private static final String APP_PACKAGE = "appPackage";
     private static final String APP_ACTIVITY = "appActivity";
-    private static final String JSON_FILE_PATH = "src/test/resources/mobile_capabilities.json";
+    private static final String JSON_FILE_PATH = "src/test/resources/capabilities.json";
     private static final String APP = "app";
     private static final String AUTOMATION_NAME = "automationName";
     private static final JsonParser parser = new JsonParser();

@@ -23,17 +23,17 @@ public class DashboardScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"com.disney.wdpro.dlr:id/tab_animated_icon\")")
     private AndroidElement addPlansButton;
 
-    public MapScreen mapScreen() {
+    public MapScreen goToMapScreen() {
         click(mapButton);
         return new MapScreen(driver);
     }
 
-    public MenuScreen menuScreen() {
+    public MenuScreen goToMenuScreen() {
         click(menuButton);
         return new MenuScreen(driver);
     }
 
-    public PlansScreen plansScreen() {
+    public PlansScreen goToPlansScreen() {
         click(addPlansButton);
         return new PlansScreen(driver);
     }

@@ -17,6 +17,10 @@ public class MapScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "UiSelector().resourceId(\"com.disney.wdpro.dlr:id/facilityTypeTitle\").text(\"Hotels\")")
     private AndroidElement hotelsText;
 
+    public AndroidElement getCategoryButton() {
+        return categoryButton;
+    }
+
     public boolean categoryButtonDisplayed() {
         return isElementAvailable(categoryButton);
     }

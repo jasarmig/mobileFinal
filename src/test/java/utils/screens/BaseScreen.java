@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
@@ -31,12 +32,13 @@ public class BaseScreen {
         element.click();
     }
 
-    public void swipeVertical(float percentage) {
+/*    public void swipeVertical(double anchorPercentage, double topPercentage, double bottomPercentage) {
         Dimension windowSize = driver.manage().window().getSize();
-        TouchAction ta = new TouchAction(driver);
-        ta.press(PointOption.point(207, 582)).moveTo(PointOption.point(
-                8,-360)).release().perform();
-    }
+        int anchor = (int)(windowSize.width * anchorPercentage);
+        int startPoint = (int)(windowSize.height * bottomPercentage);
+        int endPoint = (int)(windowSize.height * topPercentage);
+        new TouchAction(driver).press(PointOption.point(anchor,startPoint)).moveTo(PointOption.point(anchor,endPoint)).release().perform();
+    }*/
 
     public boolean isElementAvailable(AndroidElement element) {
         WebDriverWait wait = new WebDriverWait(driver, 3);

@@ -13,4 +13,10 @@ public class PlansScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "UiSelector().resourceId(\"com.disney.wdpro.dlr:id/actionSheetItemText\").textContains(\"Dining\")")
     AndroidElement diningReserveButton;
 
+    public boolean getDiningReserveButton() {
+        if(diningReserveButton != null){
+            return true;
+        }
+        return false;
+    }
 }

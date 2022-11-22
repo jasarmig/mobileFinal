@@ -3,6 +3,7 @@ package utils.tests;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import screens.DashboardScreen;
 import utils.ConfigCapabilities;
@@ -34,6 +35,11 @@ public class BaseTest {
         } catch (MalformedURLException exception) {
             exception.printStackTrace();
         }
-        baseScreen.goToDashboard();
+        setUpStartApp();
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void mobileApplicationEnd() {
+        driver.quit();
     }
 }

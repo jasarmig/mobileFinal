@@ -1,5 +1,6 @@
 package screens;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -13,9 +14,15 @@ public class MenuScreen extends BaseScreen {
     @AndroidFindBy(uiAutomator = "UiSelector().resourceId(\"com.disney.wdpro.dlr:id/content\").textContains(\"Privacy\")")
     private AndroidElement privacyButton;
 
-    public PrivacyScreen privacyScreen() {
-        swipeVertical(100);
+    private AndroidElement scrollableMenu = driver.findElement(new MobileBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).flingToEnd(10)"));
+
+    public PrivacyScreen goToPrivacyScreen() {
+        getScrollableMenu();
         click(privacyButton);
         return new PrivacyScreen(driver);
+    }
+
+    public AndroidElement getScrollableMenu() {
+        return scrollableMenu;
     }
 }
