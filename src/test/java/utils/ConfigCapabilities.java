@@ -8,6 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+@SuppressWarnings({"deprecation", "TryWithIdenticalCatches"})
 public class ConfigCapabilities {
 
     private static final String DEVICE_NAME = "deviceName";

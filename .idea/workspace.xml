@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a7bc569-0cee-4d4c-b368-036e1ebf84de" name="Changes" comment="Tests implemented">
+    <list default="true" id="9a7bc569-0cee-4d4c-b368-036e1ebf84de" name="Changes" comment="Warnings attended">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/reporting/Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/reporting/Reporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/screens/PlansScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/screens/PlansScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screens/MenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/screens/MenuScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UserTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/screens/BaseScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/screens/BaseScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/ConfigCapabilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/ConfigCapabilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/suite.xml" afterDir="false" />
     </list>
@@ -52,6 +55,23 @@
       <recent name="C:\Users\je.sarmiento\Documents\TAAU2\mobileFinal\src\test\resources" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="C:/Users/je.sarmiento/Documents/TAAU2/mobileFinal/src/test/resources/suite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mobileFinal" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/suite.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/je.sarmiento/Documents/TAAU2/mobileFinal/src/test/resources/suite.xml" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669084860196</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Warnings attended">
+      <created>1669086147790</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669086147790</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit, base configuration" />
     <MESSAGE value="Tests implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests implemented" />
+    <MESSAGE value="Warnings attended" />
+    <option name="LAST_COMMIT_MESSAGE" value="Warnings attended" />
   </component>
 </project>

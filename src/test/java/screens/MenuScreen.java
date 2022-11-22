@@ -19,8 +19,9 @@ public class MenuScreen extends BaseScreen {
     public PrivacyScreen goToPrivacyScreen() {
         if(getScrollableMenu()){
             click(privacyButton);
+            return new PrivacyScreen(driver);
         }
-        return new PrivacyScreen(driver);
+        return null;
     }
 
     public boolean getScrollableMenu() {
